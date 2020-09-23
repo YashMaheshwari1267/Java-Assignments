@@ -1,5 +1,5 @@
 <?xml version="1.0" encoding="UTF-8" ?>
-<testsuite tests="8" failures="0" name="com.assignment.java.AppTest" time="0.01" errors="0" skipped="0">
+<testsuite tests="8" failures="2" name="com.assignment.java.DuplicateValuesTest" time="0.002" errors="0" skipped="0">
   <properties>
     <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
     <property name="java.vm.version" value="11.0.8+10-LTS"/>
@@ -65,12 +65,30 @@
     <property name="sun.desktop" value="windows"/>
     <property name="sun.cpu.isalist" value="amd64"/>
   </properties>
-  <testcase classname="com.assignment.java.AppTest" name="testFindMissingNumber1" time="0.006"/>
-  <testcase classname="com.assignment.java.AppTest" name="testLargestThreeElements1" time="0"/>
-  <testcase classname="com.assignment.java.AppTest" name="testLargestThreeElements" time="0"/>
-  <testcase classname="com.assignment.java.AppTest" name="testFindMissingNumber2" time="0"/>
-  <testcase classname="com.assignment.java.AppTest" name="testFindMissingNumber" time="0"/>
-  <testcase classname="com.assignment.java.AppTest" name="testFindCommonElements" time="0.001"/>
-  <testcase classname="com.assignment.java.AppTest" name="testApp" time="0"/>
-  <testcase classname="com.assignment.java.AppTest" name="testPushZerosToEnd" time="0.003"/>
+  <testcase classname="com.assignment.java.DuplicateValuesTest" name="test" time="0"/>
+  <testcase classname="com.assignment.java.DuplicateValuesTest" name="testDuplicateValue5" time="0.001">
+    <failure message="expected:&lt;2&gt; but was:&lt;1&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;2&gt; but was:&lt;1&gt;
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:201)
+	at junit.framework.Assert.assertEquals(Assert.java:207)
+	at com.assignment.java.DuplicateValuesTest.testDuplicateValue5(DuplicateValuesTest.java:43)
+</failure>
+  </testcase>
+  <testcase classname="com.assignment.java.DuplicateValuesTest" name="testDuplicateValue2" time="0.001">
+    <failure message="expected:&lt;2&gt; but was:&lt;1&gt;" type="junit.framework.AssertionFailedError">junit.framework.AssertionFailedError: expected:&lt;2&gt; but was:&lt;1&gt;
+	at junit.framework.Assert.fail(Assert.java:47)
+	at junit.framework.Assert.failNotEquals(Assert.java:282)
+	at junit.framework.Assert.assertEquals(Assert.java:64)
+	at junit.framework.Assert.assertEquals(Assert.java:201)
+	at junit.framework.Assert.assertEquals(Assert.java:207)
+	at com.assignment.java.DuplicateValuesTest.testDuplicateValue2(DuplicateValuesTest.java:31)
+</failure>
+  </testcase>
+  <testcase classname="com.assignment.java.DuplicateValuesTest" name="testDuplicateValue4" time="0"/>
+  <testcase classname="com.assignment.java.DuplicateValuesTest" name="testDuplicateValue6" time="0"/>
+  <testcase classname="com.assignment.java.DuplicateValuesTest" name="testDuplicateValue3" time="0"/>
+  <testcase classname="com.assignment.java.DuplicateValuesTest" name="testDuplicateValue1" time="0"/>
+  <testcase classname="com.assignment.java.DuplicateValuesTest" name="testDuplicateValue" time="0"/>
 </testsuite>
