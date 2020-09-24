@@ -4,7 +4,7 @@ import java.util.ArrayList;
 import java.util.Collections;
 
 public class RearrangeDigits {
-	static int[] rearrange(int x) {
+	static int rearrange(int x) {
 		ArrayList<Integer> arr=  new ArrayList<Integer>();
 		while(x > 0) {
 			arr.add(x % 10);
@@ -17,7 +17,12 @@ public class RearrangeDigits {
 		for(Integer n: arr) {
 			ints[i++]= n;
 		}
-		return ints;
+		int result=0,k=1;
+		for(int j=ints.length-1;j>=0;j--) {
+			result = result + (ints[j]*k);
+			k=k*10;
+		}
+		return result;
 	}
 
 }

@@ -22,7 +22,10 @@ public class App
     	   System.out.println("6. Assignment 2.2");
     	   System.out.println("7. Assignment 2.3");
     	   System.out.println("8. Assignment 2.4");
-    	   System.out.println("9. Exit");
+    	   System.out.println("9. Assignment 3.1");
+    	   System.out.println("10. Assignment 3.2");
+    	   System.out.println("11. Assignment 3.3");
+    	   System.out.println("12. Exit");
     	   System.out.print("Enter your choice :");
     	   int option = sc.nextInt();
     	 
@@ -81,8 +84,8 @@ public class App
     		   Scanner s3= new Scanner(System.in);
     		   System.out.print("Enter a integer: ");
     		   number = s3.nextInt();
-    		   int []ints= RearrangeDigits.rearrange(number);
-    		   for(int i=0;i<ints.length;i++) {System.out.print(ints[i]);}
+    		   int ints= RearrangeDigits.rearrange(number);
+    		   System.out.print(ints);
     		   break;
     		   
     	   case 8: 
@@ -96,7 +99,29 @@ public class App
     			   a[i]=s5.nextInt();
     		   System.out.println(OddTimes.findOdd(a));
     		   break;
-    	   
+    		   
+    	   case 9:
+    		   Scanner s6= new Scanner(System.in);
+    		   System.out.print("Enter a string: ");
+    		   String str1= s6.nextLine();
+    		   System.out.println(SortString.sortString(str1));
+    		   break;
+    		   
+    	   case 10:
+    		   Scanner s7= new Scanner(System.in);
+    		   System.out.print("Enter a string: ");
+    		   String str2= s7.nextLine();
+    		   SpinWords.spinWords(str2);
+    		   break;
+    		   
+    	   case 11:
+    		   Scanner s8 = new Scanner(System.in);
+    		   System.out.println("Enter a number: ");
+    		   int num= s8.nextInt();
+    		   if(PerfectSquare.isPerfectSquare(num)) System.out.println("true");
+    		   else System.out.println("false");
+    		   break;
+    		   
     	   default: System.exit(0);
     	   
     	   }
