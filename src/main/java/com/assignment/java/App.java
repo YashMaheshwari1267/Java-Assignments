@@ -25,7 +25,8 @@ public class App
     	   System.out.println("9. Assignment 3.1");
     	   System.out.println("10. Assignment 3.2");
     	   System.out.println("11. Assignment 3.3");
-    	   System.out.println("12. Exit");
+    	   System.out.println("12. Assignment 4");
+    	   System.out.println("13. Exit");
     	   System.out.print("Enter your choice :");
     	   int option = sc.nextInt();
     	 
@@ -120,6 +121,11 @@ public class App
     		   int num= s8.nextInt();
     		   if(PerfectSquare.isPerfectSquare(num)) System.out.println("true");
     		   else System.out.println("false");
+    		   break;
+    		   
+    	   case 12:
+    		   int sum = CommandLineArguments.printSum(Integer.parseInt(args[0]), Integer.parseInt(args[1]), Integer.parseInt(args[2]));
+    		   System.out.println(sum);
     		   break;
     		   
     	   default: System.exit(0);
