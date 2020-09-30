@@ -1,7 +1,6 @@
 package collection.assignments;
 
 import java.util.ArrayList;
-import java.util.Collection;
 import java.util.HashMap;
 import java.util.HashSet;
 import java.util.List;
@@ -342,7 +341,7 @@ public class TestCollectionOne {
 		Car c2=new Car("maruti","swift",2020,900000);
 		Car c3=new Car("hyundai","wrv",2017,1000000);
 		
-		List<Car> carlist= new ArrayList();
+		List<Car> carlist= new ArrayList<Car>();
 		HashSet<Car> cars= new HashSet<Car>();
 		cars.add(c1);
 		cars.add(c2);
