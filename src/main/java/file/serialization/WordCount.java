@@ -8,10 +8,10 @@ public class WordCount {
 
 	public static int wordCount(String path) throws IOException{
 		File file= new File(path);
+		int count=0;
+		Logger logger = Logger.getLogger(WordCount.class);
 		if(FileExist.isFileExist(path)) {
 			FileInputStream fis= new FileInputStream(file);
-			Logger logger = Logger.getLogger(WordCount.class);
-			int count=0;
 			try {
 				byte[] c= new byte[1024];
 				fis.read(c);
@@ -26,8 +26,9 @@ public class WordCount {
 			finally {
 				fis.close();
 			}
-			return count;
 		}
-		return 0;
+		else
+			logger.error("File not Found.!!");
+		return count;
 	}
 }

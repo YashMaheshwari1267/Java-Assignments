@@ -9,12 +9,11 @@ public class LineCount {
 
 	public static int lineCount(String path) throws IOException{
 		File file= new File(path);
+		int count=0,flag=0;
+		Logger logger = Logger.getLogger(LineCount.class);
 		if(FileExist.isFileExist(path)) {
 			FileInputStream fis= new FileInputStream(file);
 			InputStream is= new BufferedInputStream(fis);
-			int count=0;
-			Logger logger = Logger.getLogger(LineCount.class);
-			
 			try {
 				byte[] c= new byte[1024];
 				int readChars=0;
@@ -30,10 +29,12 @@ public class LineCount {
 				}
 				if(endsWithoutNewLine)
 					count++;
-				if(count == 0 && !empty)
-					return 1;
-				else
-					return count;
+				if(count == 0 && !empty) {
+					flag=1;
+				}
+				else {
+					flag=count;
+				}
 			}
 			catch (Exception e) {
 				logger.error(e);
@@ -41,9 +42,10 @@ public class LineCount {
 			finally {
 				is.close();
 			}
-			return count;
 		}
-		return 0;
+		else
+			logger.error("File not found..!!");
+		return flag;
 	}
 	
 }
